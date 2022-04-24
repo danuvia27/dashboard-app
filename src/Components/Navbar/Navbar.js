@@ -6,33 +6,30 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { mainNavbarItems } from './consts/navbarItems';
 
 const Navbar = () => {
-const drawerWidth =220;
+ const drawerWidth = 300;
+
   return (
    <Drawer
      sx={{
-     width: drawerWidth,
-     flexShrink: 0,
-     '& .MuiDrawer-paper': {
       width: drawerWidth,
-      boxSizing: 'border-box',
-      backgroundColor:'#034C8C',
-      color:'whitesmoke',
-              },
-             }}
-            variant="permanent"
-            anchor="left"
-          >
+      flexShrink:0,
+      '& .MuiDrawer-paper': {
+       width: drawerWidth,
+       boxSizing: 'border-box',
+       backgroundColor: '#034C8C',
+      }
+    }}   
+     varient="permanent"
+     anchor="left">
             <Toolbar />
             <Divider />
             <List>
               {mainNavbarItems.map((text, index) => (
                 <ListItem button key={text.id}>
-                  <ListItemIcon sx={{ color:'whitesmoke' }}>
+                <ListItemIcon sx={{color: 'white'}}>
                     {text.icon}
                   </ListItemIcon>
                   <ListItemText primary={text.label} />
@@ -41,6 +38,6 @@ const drawerWidth =220;
             </List>
           
           </Drawer>
-    )
+    );
     }
     export default Navbar
