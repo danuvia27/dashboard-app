@@ -20,9 +20,10 @@ const Navbar = () => {
        width: drawerWidth,
        boxSizing: 'border-box',
        backgroundColor: '#034C8C',
-      }
+       color: 'whitesmoke',
+      },
     }}   
-     varient="permanent"
+     variant="permanent"
      anchor="left">
             <Toolbar />
             <Divider />
